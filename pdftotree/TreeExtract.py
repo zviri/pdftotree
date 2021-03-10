@@ -105,7 +105,7 @@ class TreeExtractor(object):
             # Create a PDF resource manager object that stores shared resources.
             rsrcmgr = PDFResourceManager()
             # Set parameters for analysis.
-            laparams = LAParams(char_margin=1.0, word_margin=0.1, detect_vertical=True)
+            laparams = LAParams(char_margin=1.0, word_margin=0.1, detect_vertical=False, all_texts=True)
             # Create a PDF page aggregator object.
             device = CustomPDFPageAggregator(rsrcmgr, laparams=laparams)
             # Create a PDF interpreter object.
@@ -256,7 +256,7 @@ class TreeExtractor(object):
         # use heuristics to get tables if no model_type is provided
         else:
             for page_num in self.elems.keys():
-                tables[page_num] = self.get_tables_page_num(page_num)
+                tables[page_num] = []
 
         # Manage References - indicator to indicate if reference has been seen
         ref_page_seen = False
