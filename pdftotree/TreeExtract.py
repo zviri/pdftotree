@@ -7,7 +7,6 @@ from typing import Any, Dict, List, Optional, Tuple
 from xml.dom.minidom import Document, Element
 
 import numpy as np
-import tabula
 from pdfminer.image import ImageWriter
 from pdfminer.layout import LAParams, LTChar, LTImage, LTPage, LTTextLine
 from pdfminer.pdfdocument import PDFDocument
