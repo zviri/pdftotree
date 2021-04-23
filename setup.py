@@ -18,7 +18,7 @@ setup(
         "pillow",
         "selectivesearch",
 #        "sklearn",
-        "tabula-py",
+#        "tabula-py",
 #        "tensorflow>=2.2",
         "wand",
     ],
